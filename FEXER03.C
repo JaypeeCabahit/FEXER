@@ -10,7 +10,7 @@ int main() {
     for (day = 1; day <= 30; day++) {
         totalPay += pay;
         printf("Day %2d: P%ld\n", day, pay);
-        pay <<= 1;
+        pay = pay * 2;
     }
 
     printf("\nTotal pay after 30 days: P%ld\n", totalPay);
