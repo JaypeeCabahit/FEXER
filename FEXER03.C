@@ -1,18 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    long long pay = 1;
-    long long totalPay = 0;
+    long pay = 1;
+    long totalPay = 0;
+    int day;
 
     printf("\n=== Pay Calculation Over 30 Days ===\n");
 
-    for (int day = 1; day <= 30; day++) {
+    for (day = 1; day <= 30; day++) {
         totalPay += pay;
-        printf("Day %2d: P%lld\n", day, pay);
-        pay <<= 1; // Equivalent to pay *= 2, but using bitwise shift for variety
+        printf("Day %2d: P%ld\n", day, pay);
+        pay <<= 1;
     }
 
-    printf("\nTotal pay after 30 days: P%lld\n", totalPay);
+    printf("\nTotal pay after 30 days: P%ld\n", totalPay);
 
     return 0;
 }
